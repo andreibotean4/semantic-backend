@@ -1,0 +1,11 @@
+image: node:8.11.3
+
+stages:
+  - deploy
+
+deploy:production:
+  stage: deploy
+  script:
+    - git push https://heroku:ca9e1d99-bfe1-4cf4-8bf2-f6b80f438201@git.heroku.com/jokes-app.git
+  only:
+    - master
